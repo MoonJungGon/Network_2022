@@ -1,4 +1,3 @@
-import java.awt.EventQueue;
 import java.awt.event.*;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -193,6 +192,7 @@ public class mainBoard {
 		
 		
 		
+
 		// API 값 불러오기
 		JPanel mainP = new JPanel();
 		mainP.setBackground(new Color(255, 204, 102));
@@ -212,9 +212,9 @@ public class mainBoard {
 		newsP.setBounds(0, 0, 789, 81);
 		newsP.setLayout(null);
 		
-		ImageIcon img = new ImageIcon("./img\\thermometer2.png");
+		ImageIcon img = new ImageIcon(mainBoard.class.getResource("/PngFile/thermometer2.png"));
 		if(Integer.parseInt(data[0][1]) < 20) {
-			img = new ImageIcon("./img\\thermometer1.png");
+			img = new ImageIcon(mainBoard.class.getResource("/PngFile/thermometer1.png"));
 		}
 		Image temp = img.getImage();
 		temp = temp.getScaledInstance(25, 25, Image.SCALE_SMOOTH);
@@ -224,7 +224,7 @@ public class mainBoard {
 		lblApiData0.setBounds(30, 9, 180, 27);
 		newsP.add(lblApiData0);
 		
-		ImageIcon img2 = new ImageIcon("./img\\rain.png");
+		ImageIcon img2 = new ImageIcon(mainBoard.class.getResource("/PngFile/rain.png"));
 		temp = img2.getImage();
 		temp = temp.getScaledInstance(25, 25, Image.SCALE_SMOOTH);
 		img2 = new ImageIcon(temp);
@@ -233,7 +233,7 @@ public class mainBoard {
 		lblApiData1.setIcon(img2);
 		newsP.add(lblApiData1);
 		
-		ImageIcon img3 = new ImageIcon("./img\\humidity.png");
+		ImageIcon img3 = new ImageIcon(mainBoard.class.getResource("/PngFile/humidity.png"));
 		temp = img3.getImage();
 		temp = temp.getScaledInstance(25, 25, Image.SCALE_SMOOTH);
 		img3 = new ImageIcon(temp);
@@ -242,7 +242,7 @@ public class mainBoard {
 		lblApiData2.setIcon(img3);
 		newsP.add(lblApiData2);
 		
-		ImageIcon img4 = new ImageIcon("./img\\weather.png");
+		ImageIcon img4 = new ImageIcon(mainBoard.class.getResource("/PngFile/weather.png"));
 		temp = img4.getImage();
 		temp = temp.getScaledInstance(25, 25, Image.SCALE_SMOOTH);
 		img4 = new ImageIcon(temp);
@@ -251,7 +251,7 @@ public class mainBoard {
 		lblApiData3.setIcon(img4);
 		newsP.add(lblApiData3);
 		
-		ImageIcon img5 = new ImageIcon("./img\\windway.png");
+		ImageIcon img5 = new ImageIcon(mainBoard.class.getResource("/PngFile/windway.png"));
 		temp = img5.getImage();
 		temp = temp.getScaledInstance(25, 25, Image.SCALE_SMOOTH);
 		img5 = new ImageIcon(temp);
@@ -260,7 +260,7 @@ public class mainBoard {
 		lblApiData4.setIcon(img5);
 		newsP.add(lblApiData4);
 		
-		ImageIcon img6 = new ImageIcon("./img\\windspeed.png");
+		ImageIcon img6 = new ImageIcon(mainBoard.class.getResource("/PngFile/windspeed.png"));
 		temp = img6.getImage();
 		temp = temp.getScaledInstance(25, 25, Image.SCALE_SMOOTH);
 		img6 = new ImageIcon(temp);
@@ -269,7 +269,7 @@ public class mainBoard {
 		lblApiData5.setIcon(img6);
 		newsP.add(lblApiData5);
 		
-		ImageIcon img0 = new ImageIcon("./img\\KMA.png");
+		ImageIcon img0 = new ImageIcon(mainBoard.class.getResource("/PngFile/KMA.png"));
 		temp = img0.getImage();
 		temp = temp.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 		img0 = new ImageIcon(temp);
@@ -372,7 +372,7 @@ public class mainBoard {
 						}catch(Exception e1) { 
 							System.out.println("Error:" +mainSock);
 						}
-						//JOptionPane.showMessageDialog(null,"Wanna see Profile!!!");	
+						
 					}
 				});
 				listMenu_2.addActionListener(new ActionListener() {
@@ -453,7 +453,7 @@ public class mainBoard {
 						}catch(Exception e1) { 
 							System.out.println("Error:" +mainSock);
 						}
-						//JOptionPane.showMessageDialog(null,"Wanna see Profile!!!");		
+								
 					}
 				});
 				listMenu_b.addActionListener(new ActionListener() {
@@ -527,26 +527,7 @@ public class mainBoard {
 				centerP.add(prof_id,BorderLayout.WEST);
 				
 				
-				/*prof_id.addActionListener(new ActionListener() {
-					
-					
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						
-						
-						
-						
-						beforeSwitchProfile=retweet_user;
-						frame.setVisible(false);
-						
-						new makeProfile(beforeSwitchProfile);
-						
-						
-						
-						
-					}
-					
-				});*/
+			
 				
 				make_list_scroll(cont,0,count++*300,150,250);
 			}
@@ -625,7 +606,7 @@ public class mainBoard {
 							}catch(Exception e1) { 
 								System.out.println("Error:" +mainSock);
 							}
-							//JOptionPane.showMessageDialog(null,"Wanna see Profile!!!");	
+							
 						}
 					});
 					listMenu_2.addActionListener(new ActionListener() {
@@ -706,7 +687,7 @@ public class mainBoard {
 							}catch(Exception e1) { 
 								System.out.println("Error:" +mainSock);
 							}
-							//JOptionPane.showMessageDialog(null,"Wanna see Profile!!!");	
+								
 						}
 					});
 					listMenu_b.addActionListener(new ActionListener() {
@@ -780,27 +761,7 @@ public class mainBoard {
 					centerP.setLayout(new BorderLayout(0, 0));
 					centerP.add(prof_id,BorderLayout.WEST);
 					
-					
-					/*prof_id.addActionListener(new ActionListener() {
-						
-						
-						@Override
-						public void actionPerformed(ActionEvent e) {
-							
-							
-							
-							
-							beforeSwitchProfile=retweet_user;
-							frame.setVisible(false);
-							
-							new makeProfile(beforeSwitchProfile);
-							
-							
-							
-							
-						}
-						
-					});*/
+				
 					
 					make_list_scroll_2(cont,0,count++*300,150,250);
 					
@@ -1014,26 +975,7 @@ public class mainBoard {
 					centerP.add(prof_id,BorderLayout.WEST);
 					
 					
-					/*prof_id.addActionListener(new ActionListener() {
-						
-						
-						@Override
-						public void actionPerformed(ActionEvent e) {
-							
-							
-							
-							
-							beforeSwitchProfile=retweet_user;
-							frame.setVisible(false);
-							
-							new makeProfile(beforeSwitchProfile);
-							
-							
-							
-							
-						}
-						
-					});*/
+				
 					
 					make_room_scroll_2(cont,0,count++*300,150,250);
 					

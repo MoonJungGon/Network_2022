@@ -22,7 +22,7 @@ import javax.swing.JLabel;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import java.awt.FileDialog;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -148,7 +148,7 @@ public class Chat_room_UI extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	/*public static void main(String[] args) {
+	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -159,7 +159,7 @@ public class Chat_room_UI extends JFrame {
 				}
 			}
 		});
-	}*/
+	}
 
 	public class ExitChat extends JFrame implements ActionListener {
 		
@@ -179,6 +179,8 @@ public class Chat_room_UI extends JFrame {
 			add("Center", jpCenter);
 			add("South", jtf);
 
+			
+			
 			addUser.addActionListener(this);
 
 			setBounds(100, 100, 300, 300);
@@ -266,11 +268,11 @@ public class Chat_room_UI extends JFrame {
 		btnExit.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e){
-				new ExitChat();
+				setVisible(false);
 			}
 		});
 		
-		//this.setVisible(true);
+		
 		this.setResizable(false);
 	}
 	

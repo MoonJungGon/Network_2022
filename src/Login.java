@@ -293,8 +293,8 @@ public class Login {
 					
 					
 					 
-					//User_2.id=in.nextLine();
-					//User_2.pwd=in.nextLine();
+					User_2.id=in.nextLine();
+					User_2.pwd=in.nextLine();
 
 					JOptionPane.showMessageDialog(null,"Login Success!!!");
 					
